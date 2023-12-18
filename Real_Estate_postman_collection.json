@@ -1,0 +1,570 @@
+{
+	"info": {
+		"_postman_id": "0be65051-a97a-4c86-8fdc-abf60eb37a28",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18050576"
+	},
+	"item": [
+		{
+			"name": "real-estate",
+			"item": [
+				{
+					"name": "Broker",
+					"item": [
+						{
+							"name": "Add Broker",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"broker\",\r\n    \"contactNo\": \"9898989897\",\r\n    \"email\": \"broker@yopmail.com\",\r\n    \"username\":\"test1\",\r\n    \"password\":\"test1@123\",\r\n    \"confirm_password\":\"test1@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/add-broker",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"add-broker"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Broker list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/get-broker-list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"get-broker-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Property for broker",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTdlMDJkYTVjNDUwODZiYmFlZWE4YjkiLCJ1c2VyX2VtYWlsIjoibGFuZGxvcmRAeW9wbWFpbC5jb20iLCJyb2xlIjoibGFuZGxvcmQiLCJpYXQiOjE3MDI3OTYyMTYsImV4cCI6MTcwMjgzMjIxNn0.pjIX7_T2E32SmqvfS3VJNjW3ma_8HDoxbB6XRG-AABQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"brokerId\":\"657ded4c1c4c60c95206e4ed\",\r\n    \"properties\": [\"657df30b66c1fcc6dfe39846\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/add-broker-property",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"add-broker-property"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Broker",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTdlMDJkYTVjNDUwODZiYmFlZWE4YjkiLCJ1c2VyX2VtYWlsIjoibGFuZGxvcmRAeW9wbWFpbC5jb20iLCJyb2xlIjoibGFuZGxvcmQiLCJpYXQiOjE3MDI3OTYyMTYsImV4cCI6MTcwMjgzMjIxNn0.pjIX7_T2E32SmqvfS3VJNjW3ma_8HDoxbB6XRG-AABQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/delete-broker/657ded4c1c4c60c95206e4ed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"delete-broker",
+										"657ded4c1c4c60c95206e4ed"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Broker by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/get-broker/657ded4c1c4c60c95206e4ed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"get-broker",
+										"657ded4c1c4c60c95206e4ed"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Broker",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTdlMDJkYTVjNDUwODZiYmFlZWE4YjkiLCJ1c2VyX2VtYWlsIjoibGFuZGxvcmRAeW9wbWFpbC5jb20iLCJyb2xlIjoibGFuZGxvcmQiLCJpYXQiOjE3MDI3OTYyMTYsImV4cCI6MTcwMjgzMjIxNn0.pjIX7_T2E32SmqvfS3VJNjW3ma_8HDoxbB6XRG-AABQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"broker\",\r\n    \"contactNo\": \"9898989897\",\r\n    \"email\": \"broker@yopmail.com\",\r\n    \"username\":\"test1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/update-broker/657ded4c1c4c60c95206e4ed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"update-broker",
+										"657ded4c1c4c60c95206e4ed"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Landlord",
+					"item": [
+						{
+							"name": "Get Landlord list",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/get-landlord-list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"get-landlord-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Landlord",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTdlMDJkYTVjNDUwODZiYmFlZWE4YjkiLCJ1c2VyX2VtYWlsIjoibGFuZGxvcmRAeW9wbWFpbC5jb20iLCJyb2xlIjoibGFuZGxvcmQiLCJpYXQiOjE3MDI3OTYyMTYsImV4cCI6MTcwMjgzMjIxNn0.pjIX7_T2E32SmqvfS3VJNjW3ma_8HDoxbB6XRG-AABQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Test2\",\r\n    \"lastName\": \"landlord\",\r\n    \"contactNo\": \"9898959595\",\r\n    \"email\": \"landlord@yopmail.com\",\r\n    \"username\":\"testlandlord\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/update-landlord/657e02da5c45086bbaeea8b9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"update-landlord",
+										"657e02da5c45086bbaeea8b9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Landlord",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTdlMDJkYTVjNDUwODZiYmFlZWE4YjkiLCJ1c2VyX2VtYWlsIjoibGFuZGxvcmRAeW9wbWFpbC5jb20iLCJyb2xlIjoibGFuZGxvcmQiLCJpYXQiOjE3MDI3OTYyMTYsImV4cCI6MTcwMjgzMjIxNn0.pjIX7_T2E32SmqvfS3VJNjW3ma_8HDoxbB6XRG-AABQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/delete-landlord/657da735eb49dcb1041625a8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"delete-landlord",
+										"657da735eb49dcb1041625a8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get landlord by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/get-landlord/657da735eb49dcb1041625a8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"get-landlord",
+										"657da735eb49dcb1041625a8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Landlord",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Test2\",\r\n    \"lastName\": \"landlord\",\r\n    \"contactNo\": \"9898959595\",\r\n    \"email\": \"landlord@yopmail.com\",\r\n    \"username\":\"testlandlord\",\r\n    \"password\":\"test@123\",\r\n    \"confirm_password\":\"test@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/add-landlord",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"add-landlord"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Property",
+					"item": [
+						{
+							"name": "Add property details",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTdlMDJkYTVjNDUwODZiYmFlZWE4YjkiLCJ1c2VyX2VtYWlsIjoibGFuZGxvcmRAeW9wbWFpbC5jb20iLCJyb2xlIjoibGFuZGxvcmQiLCJpYXQiOjE3MDI3OTYyMTYsImV4cCI6MTcwMjgzMjIxNn0.pjIX7_T2E32SmqvfS3VJNjW3ma_8HDoxbB6XRG-AABQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"location\": \"123 Main St\",\r\n  \"type\": \"Residential\",\r\n  \"area\": \"50 sqft\",\r\n  \"landlord_id\": \"657dc2d7a8948fa5000ff2a5\",\r\n  \"building\": {\r\n    \"buildingName\": \"Sample Building\",\r\n    \"address\": \"456 Oak Ave\",\r\n    \"city\": \"Cityville\",\r\n    \"State\": \"Stateville\"\r\n  },\r\n  \"floors\": [\r\n    {\r\n      \"floorNumber\": 1,\r\n      \"units\": [\r\n        { \"unitNumber\": \"101\", \"unitName\": \"Bedroom\" },\r\n        { \"unitNumber\": \"102\", \"unitName\": \"Kitchen\" }\r\n      ]\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/add-property",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"add-property"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete property",
+							"request": {
+								"auth": {
+									"type": "bearer"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/delete-property/657df30b66c1fcc6dfe39846",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"delete-property",
+										"657df30b66c1fcc6dfe39846"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Property",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTdlMDJkYTVjNDUwODZiYmFlZWE4YjkiLCJ1c2VyX2VtYWlsIjoibGFuZGxvcmRAeW9wbWFpbC5jb20iLCJyb2xlIjoibGFuZGxvcmQiLCJpYXQiOjE3MDI3OTYyMTYsImV4cCI6MTcwMjgzMjIxNn0.pjIX7_T2E32SmqvfS3VJNjW3ma_8HDoxbB6XRG-AABQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"location\": \"123 Main St\",\r\n  \"type\": \"Residential\",\r\n  \"area\": \"50 sqft\",\r\n  \"landlord_id\": \"657dc2d7a8948fa5000ff2a5\",\r\n  \"building\": {\r\n    \"buildingName\": \"Sample Building\",\r\n    \"address\": \"456 Oak Ave\",\r\n    \"city\": \"Cityville\",\r\n    \"State\": \"Stateville\"\r\n  },\r\n  \"floors\": [\r\n    {\r\n      \"floorNumber\": 1,\r\n      \"units\": [\r\n        { \"unitNumber\": \"101\", \"unitName\": \"Bedroom\" },\r\n        { \"unitNumber\": \"102\", \"unitName\": \"Kitchen\" }\r\n      ]\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/update-property/657dc4d705764725e5a303ef",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"update-property",
+										"657dc4d705764725e5a303ef"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Property List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/get-property-list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"get-property-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Property by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/v1/get-property/657dc4d705764725e5a303ef",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"get-property",
+										"657dc4d705764725e5a303ef"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "http://localhost:5000/api/v1/login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"testlandlord\",\r\n    \"password\": \"test@123\",\r\n    \"role\" : \"landlord\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/v1/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
